@@ -38,17 +38,17 @@
       </div>
 
       <!-- QUESTIONS START AND STOP W/ HIDDEN INPUT FIELD-->
-      <div hidden="main-question-div" class="box-card">
+      <div hidden id="main-question-div" class="box-card">
         <!-- MAIN HEADER QUESTION H2  -->
         <h2 id="main-question-h2"></h2>
 
         <!-- MULTIPLE CHOICE QUESTIONS  -->
-        <button id="question-1 class="button quiz-button"></button>
-        <button id="question-2 class="button quiz-button"></button>
-        <button id="question-3 class="button quiz-button"></button>
-        <button id="question-4 class="button quiz-button"></button>
-        <button id="question-5 class="button quiz-button"></button>
-        <button id="question-6 class="button quiz-button"></button>
+        <button id="question-1" class="button quiz-button"></button>
+        <button id="question-2" class="button quiz-button"></button>
+        <button id="question-3" class="button quiz-button"></button>
+        <button id="question-4" class="button quiz-button"></button>
+        <button id="question-5" class="button quiz-button"></button>
+        <button id="question-6" class="button quiz-button"></button>
       </div>
 
       <!-- RESULTS  -->
@@ -58,7 +58,7 @@
       </div>
 
       <!-- END OF SCORE CARD W/ HIDDEN INPUT FIELD-->
-      <div hidden="main-score-div" class="box-card">
+      <div hidden id="main-score-div" class="box-card">
         <h2>TEST COMPLETED</h2>
 
         <!-- YOUR FINAL SCORE TEXTCONTENT AND LEFT EMPTY -->
@@ -73,19 +73,18 @@
       </div>
 
       <!-- LEADERBOARD RESULTS PAGE W/ HIDDEN INPUT FIELD-->
+      <div hidden id="main-leaderboard-div" class="main-card">
+        <!-- LEADERBOARD Highscores header  -->
+        <h2>Leaderboard Scores</h2>
 
-      <div hidden id="main-leaderboard-div" class="main-card"></div>
+        <!-- OL LIST FOR THE LEADERBOARD -->
+        <ol id="leaderboard-list"></ol>
 
-      <!-- LEADERBOARD Highscores header  -->
-      <h2>Leaderboard Scores</h2>
-
-      <!-- OL LIST FOR THE LEADERBOARD -->
-      <ol id="leaderboard-list"></ol>
-
-      <!-- GO BACK AND CLEAR SCORES BUTTONS -->
-      <div class="results-buttons">
-        <button id="back-to-button" class="button"></button>
-        <button id="clear-scores-button" class="button"></button>
+        <!-- GO BACK AND CLEAR SCORES BUTTONS -->
+        <div class="results-buttons">
+          <button id="back-to-button" class="button"></button>
+          <button id="clear-scores-button" class="button"></button>
+        </div>
       </div>
     </main>
 
