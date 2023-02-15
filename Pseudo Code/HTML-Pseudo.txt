@@ -10,3 +10,4 @@ HTML PSEUDO
 8. Create "your final score is" text box for final score
 9. Create div for leaderboard > H2 for "Highscores" 
 10.Create buttons for "Go back" and "clear highscores" 
+11. Create JS link
