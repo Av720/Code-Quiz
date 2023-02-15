@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -21,53 +21,75 @@
 
     <!-- MAIN BODY -->
     <main>
-
-    <!-- START OF QUESTIONS DIV  -->
+      <!-- START OF QUESTIONS DIV  -->
       <div id="main-questions">
         <!-- CODING QUIZ  HEADLINE-->
         <h2>CODING QUIZ CHALLENGE</h2>
 
         <!-- RULES FOR THE CODING QUIZ  -->
-        <p>Try to asnwer the following code-related questions within the time limit. Keep in mind that INCORRECT answers will penalize your score/time by 5 seconds. </p>
+        <p>
+          Try to asnwer the following code-related questions within the time
+          limit. Keep in mind that INCORRECT answers will penalize your
+          score/time by 5 seconds. Please press "Start Quiz" to start your test.
+        </p>
 
         <!-- START QUIZ BUTTON  -->
-        <button></button>
+        <button id="main-start-button" class="button"></button>
       </div>
 
       <!-- QUESTIONS START AND STOP -->
       <div>
         <!-- MAIN HEADER QUESTION H2  -->
-        <h2 id=""></h2>
+        <h2 id="main-question-header"></h2>
 
         <!-- MULTIPLE CHOICE QUESTIONS  -->
-        <button id=""></button>
-        <button id=""></button>
-        <button id=""></button>
-        <button id=""></button>
-        <button id=""></button>
-        <button id=""></button>
+        <button id="question-1"></button>
+        <button id="question-2"></button>
+        <button id="question-3"></button>
+        <button id="question-4"></button>
+        <button id="question-5"></button>
+        <button id="question-6"></button>
       </div>
 
       <!-- RESULTS  -->
-      <div id="placeholder">
+      <div id="main-results">
         <!-- RESULTS HEADER  -->
-        <h2>HIGH SCORES</h2>
-
-        <!-- LEADERBOARD LIST 1 - >  -->
-        <ol id=""></ol>
+        <p id="main-results-text"></p>
       </div>
 
-      <!-- END BUTTONS  -->
-      <div class="">
-        <!-- GO BACK BUTTON -->
-        <button></button>
+      <!-- END OF SCORE CARD -->
+      <div>
+        <h2>TEST COMPLETED</h2>
 
-        <!-- CLEAR BUTTON -->
-        <button></button>
+        <!-- YOUR FINAL SCORE TEXTCONTENT AND LEFT EMPTY -->
+        <p>YOUR FINAL SCORE IS: <span id="main-score"></span>.</p>
+
+        <!-- SCORE AND INITIALS BOX FORM -->
+        <form class="main-form" id="submission-form">
+          <label for="initials">ENTER INITIALS HERE:</label>
+          <input type="text" id="main-initials" />
+          <button id="main-submit-button" class="button"></button>
+        </form>
+      </div>
+
+      <!-- LEADERBOARD RESULTS PAGE -->
+
+      <div hidden id="main-leaderboard" class="main-card"></div>
+
+      <!-- LEADERBOARD Highscores header  -->
+      <h2>Leaderboard Scores</h2>
+
+      <!-- OL LIST FOR THE LEADERBOARD -->
+      <ol id="leaderboard-list"></ol>
+
+      <!-- GO BACK AND CLEAR SCORES BUTTONS -->
+      <div class="results-buttons">
+        <button id="back-button" class="button"></button>
+        <button id="clear-scores-button" class="button"></button>
       </div>
     </main>
 
     <!-- JS CODE LINK  -->
     <script src="script.js"></script>
   </body>
-</html> -->
+</html>
