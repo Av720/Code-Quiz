@@ -9,6 +9,7 @@ HTML PSEUDO
 7. Create Results Header and results score  text 
 8. Create "your final score is" text box for final score
 9. Create div for leaderboard > H2 for "Highscores" 
-10.Create buttons for "Go back" and "clear highscores" 
-11. Create JS link 
-12. Close all tags 
+10. Create ordered list for the leaderboard results (leave emtpy)
+11.Create buttons for "Go back" and "clear highscores" 
+12. Create JS link 
+13. Close all tags 
