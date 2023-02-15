@@ -1,0 +1,12 @@
+HTML PSEUDO 
+
+1. Create boiler plate got hmtl 
+2. Create header for (highscores link and time view)
+3. Create main body > Coding Quiz Headline and rules for the quiz 
+4. Create button to start quiz 
+5. Create Main Header for quiz question 
+6. Create buttons for the multiple choices 
+7. Create Results Header and results score  text 
+8. Create "your final score is" text box for final score
+9. Create div for leaderboard > H2 for "Highscores" 
+10.Create buttons for "Go back" and "clear highscores" 
