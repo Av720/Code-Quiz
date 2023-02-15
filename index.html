@@ -22,7 +22,7 @@
     <!-- MAIN BODY -->
     <main>
       <!-- START OF QUESTIONS DIV  -->
-      <div id="main-questions">
+      <div id="main-questions-div" class="box-card">
         <!-- CODING QUIZ  HEADLINE-->
         <h2>CODING QUIZ CHALLENGE</h2>
 
@@ -37,44 +37,44 @@
         <button id="main-start-button" class="button"></button>
       </div>
 
-      <!-- QUESTIONS START AND STOP -->
-      <div>
+      <!-- QUESTIONS START AND STOP W/ HIDDEN INPUT FIELD-->
+      <div hidden="main-question-div" class="box-card">
         <!-- MAIN HEADER QUESTION H2  -->
-        <h2 id="main-question-header"></h2>
+        <h2 id="main-question-h2"></h2>
 
         <!-- MULTIPLE CHOICE QUESTIONS  -->
-        <button id="question-1"></button>
-        <button id="question-2"></button>
-        <button id="question-3"></button>
-        <button id="question-4"></button>
-        <button id="question-5"></button>
-        <button id="question-6"></button>
+        <button id="question-1 class="button quiz-button"></button>
+        <button id="question-2 class="button quiz-button"></button>
+        <button id="question-3 class="button quiz-button"></button>
+        <button id="question-4 class="button quiz-button"></button>
+        <button id="question-5 class="button quiz-button"></button>
+        <button id="question-6 class="button quiz-button"></button>
       </div>
 
       <!-- RESULTS  -->
-      <div id="main-results">
+      <div id="main-results-div">
         <!-- RESULTS HEADER  -->
-        <p id="main-results-text"></p>
+        <p id="main-results-textp"></p>
       </div>
 
-      <!-- END OF SCORE CARD -->
-      <div>
+      <!-- END OF SCORE CARD W/ HIDDEN INPUT FIELD-->
+      <div hidden="main-score-div" class="box-card">
         <h2>TEST COMPLETED</h2>
 
         <!-- YOUR FINAL SCORE TEXTCONTENT AND LEFT EMPTY -->
-        <p>YOUR FINAL SCORE IS: <span id="main-score"></span>.</p>
+        <p>YOUR FINAL SCORE IS: <span id="main-score-p"></span>.</p>
 
         <!-- SCORE AND INITIALS BOX FORM -->
         <form class="main-form" id="submission-form">
           <label for="initials">ENTER INITIALS HERE:</label>
-          <input type="text" id="main-initials" />
+          <input type="text" id="main-initials-input" />
           <button id="main-submit-button" class="button"></button>
         </form>
       </div>
 
-      <!-- LEADERBOARD RESULTS PAGE -->
+      <!-- LEADERBOARD RESULTS PAGE W/ HIDDEN INPUT FIELD-->
 
-      <div hidden id="main-leaderboard" class="main-card"></div>
+      <div hidden id="main-leaderboard-div" class="main-card"></div>
 
       <!-- LEADERBOARD Highscores header  -->
       <h2>Leaderboard Scores</h2>
@@ -84,7 +84,7 @@
 
       <!-- GO BACK AND CLEAR SCORES BUTTONS -->
       <div class="results-buttons">
-        <button id="back-button" class="button"></button>
+        <button id="back-to-button" class="button"></button>
         <button id="clear-scores-button" class="button"></button>
       </div>
     </main>
