@@ -40,6 +40,16 @@ main {
 /* CARDS STYLES  */
 
 .box-card {
+    border: solid;
+    border-width: 10px;
+    border-color: rgb(31, 54, 54);
+    box-shadow: 50px green;
+    border-radius: 40px;
+    max-width: 90%;
+    margin: 20px;
+    padding: 20px;
+    color: white;
+    background-color: rgb(12, 33, 33);
 
 }
 
@@ -51,7 +61,27 @@ main {
 
 /* start button  */
 #main-start-button {
+        -webkit-border-radius: 20;
+        -moz-border-radius: 20;
+        border-radius: 20px;
+        font-family: Courier New;
+        color: #126e4b;
+        font-size: 19px;
+        background: #ffffff;
+        padding: 10px 20px 10px 20px;
+        border: solid #bfc8c4 5px;
+        text-decoration: none;
 
+}
+
+#main-start-button:hover {
+background: #ffffff;
+    background-image: -webkit-linear-gradient(top, #ffffff, #b0bdb7);
+    background-image: -moz-linear-gradient(top, #ffffff, #b0bdb7);
+    background-image: -ms-linear-gradient(top, #ffffff, #b0bdb7);
+    background-image: -o-linear-gradient(top, #ffffff, #b0bdb7);
+    background-image: linear-gradient(to bottom, #ffffff, #b0bdb7);
+    text-decoration: none;
 }
 
 /* general button  */
