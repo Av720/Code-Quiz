@@ -9,8 +9,8 @@ const mainLeaderboardDiv = document.querySelector("#main-leaderboard-div");
 //CREATE AND OBERJCT/ARRAY FOR EACH QUESTION
 var questions = [
     {
-        questionText: "Which of the following is an advantage of using JavaScript?",
-        options: [
+        title: "Which of the following is an advantage of using JavaScript?",
+        choices: [
             "1. Less server interaction",
             "2. Immediate feedback to the visitors",
             " 3. Increased interactivity",
@@ -21,26 +21,26 @@ var questions = [
 
     // ----------------------------------------------------------------------------------
     {
-        questionText:
+        title:
             "Can you pass a anonymous function as an argument to another function?",
-        options: ["1. True", "2. False"],
+        choices: ["1. True", "2. False"],
         answer: "1. True",
     },
 
     // ----------------------------------------------------------------------------------
 
     {
-        questionText:
+        title:
             "Which built-in method calls a function for each element in the array?",
-        options: ["1. while()", "2. loop()", "3. forEach", "4. None of the above"],
+        choices: ["1. while()", "2. loop()", "3. forEach", "4. None of the above"],
         answer: "3. forEach()",
     },
 
     // ----------------------------------------------------------------------------------
     {
-        questionText:
+        title:
             "Which of the following function of Number object returns the number's value?",
-        options: [
+        choices: [
             "1.toString()",
             "2. valueOf()",
             "3. toLocaleString()",
@@ -51,11 +51,65 @@ var questions = [
 
     // ----------------------------------------------------------------------------------
     {
-        questionText:
+        title:
             "Which of the following function of String object returns the index within the calling String object of the first occurrence of the specified value?",
-        options: ["1. substr()", "2. search()", "3. lastIndexOf()", "4. indexOf()"],
+        choices: ["1. substr()", "2. search()", "3. lastIndexOf()", "4. indexOf()"],
         answer: "",
     },
 ];
+
+
+// ----------------------------------------------------------------------------------
+
+// GLOBAL VARIABLES & add event listener 
+
+var mainID //intervalID; 
+var mainTime; //time
+var mainQuestion;  //currentQuestion;
+
+document.querySelector("#main-start-button").addEventListener("click", startMainQuiz);
+
+// ----------------------------------------------------------------------------------
+
+// DIAPLAY TIME ON PAGE 
+
+// create local variable for time 
+var timeShow = document.querySelector("#time");
+function displayTime() {
+    timeDisplay.textContent = time;
+}
+
+//reduce the time by 5 function 
+function timerCountdown() {
+    time--;
+    displayTime();
+    if (time < 1) {
+        endQuiz();
+    }
+}
+
+// ----------------------------------------------------------------------------------
+
+//CREATE FUNCTION FOR (startMainQuiz)
+
+// main quiz start function
+
+function startMainQuiz() {
+
+    hiddencards();
+    questioncard.removeAttribute("hidden");
+
+    question = 0;
+    showQuestion();
+
+    time = questions.length * 5
+
+    intervalID = setInterval(countdown, 1000);
+    displayTime();
+}
+
+
+
+
 
 // ----------------------------------------------------------------------------------
