@@ -6,6 +6,22 @@ const mainLeaderboardDiv = document.querySelector("#main-leaderboard-div");
 
 // ----------------------------------------------------------------------------------
 
+// FUNCTION TO APPEAR CARDS AND HIDE THEM - TIE THESE TO THE GLOBAL VARS
+
+function showHideCards() {
+    mainQuestionsDiv.setAttribute("hidden", true);
+    mainQuestionh2.setAttribute("hidden", true);
+    mainScoreDiv.setAttribute("hidden", true);
+}
+
+
+
+// VARIABLES FOR THE HIDDEN RESULTS > TIE WITH DOM
+
+var mainResultsDiv = document.querySelector("#main-results-div")
+var mainResultsText = document.querySelector("#main-results-textp")
+
+// ----------------------------------------------------------------------------------
 //CREATE AND OBERJCT/ARRAY FOR EACH QUESTION
 var questions = [
     {
@@ -67,7 +83,7 @@ var mainID //intervalID;
 var mainTime; //time
 var mainQuestion;  //currentQuestion;
 
-document.querySelector("#main-start-button").addEventListener("click", startMainQuiz);
+document.querySelector("#main-start-button").addEventListener("click", showHideCards);
 
 // ----------------------------------------------------------------------------------
 
@@ -99,16 +115,14 @@ function startMainQuiz() {
     hiddencards();
     questioncard.removeAttribute("hidden");
 
-    question = 0;
+    var question = 0;
     showQuestion();
 
-    time = questions.length * 5
+    mainTime = questions.length * 5
 
-    intervalID = setInterval(countdown, 1000);
+    var intervalID = setInterval(countdown, 1000);
     displayTime();
 }
-
-
 
 
 
