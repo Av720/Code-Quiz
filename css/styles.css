@@ -1,20 +1,18 @@
 /* BODY  */
 
 body {
-    margin: 0;
-    font-family: 'Courier New', Courier, monospace;
-
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
 }
 /* ------------------------------------------------- */
 /* HEADER  */
 
 header {
-display: flex;
-color: white ;
-background-color: rgb(31, 54, 54);
-justify-content: space-between;
-padding: 3rem;
-
+  display: flex;
+  color: white;
+  background-color: rgb(31, 54, 54);
+  justify-content: space-between;
+  padding: 2rem;
 }
 
 /* ------------------------------------------------- */
@@ -22,38 +20,52 @@ padding: 3rem;
 /* TIME  */
 
 time {
-
+    min-width: 100px;
 }
 /* ------------------------------------------------- */
 
 /* MAIN  */
 
 main {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* ------------------------------------------------- */
+
+/* HIGHSCORES AND TIME  */
+
+#highscores, .time-text {
+    font-size: 1.5rem;
+    font-weight: bold;
 
 }
+
+/* ------------------------------------------------- */
+
+#time {
+    margin-right: 80px;
+   
+}
+
 /* ------------------------------------------------- */
 
 /* CARDS STYLES  */
 
 .box-card {
-    border: solid;
-    border-width: 10px;
-    border-color: rgb(31, 54, 54);
-    box-shadow: 50px green;
-    border-radius: 40px;
-    max-width: 90%;
-    margin: 20px;
-    padding: 20px;
-    color: white;
-    background-color: rgb(12, 33, 33);
-
+  border: solid;
+  border-width: 10px;
+  border-color: rgb(38, 68, 68);
+  box-shadow: 50px green;
+  border-radius: 40px;
+  max-width: 90%;
+  margin: 20px;
+  padding: 20px;
+  color: white;
+  background-color: rgb(19, 49, 49);
 }
-
-
 
 /* ------------------------------------------------- */
 
@@ -61,50 +73,51 @@ main {
 
 /* start button  */
 #main-start-button {
-        -webkit-border-radius: 20;
-        -moz-border-radius: 20;
-        border-radius: 20px;
-        font-family: Courier New;
-        color: #126e4b;
-        font-size: 19px;
-        background: #ffffff;
-        padding: 10px 20px 10px 20px;
-        border: solid #bfc8c4 5px;
-        text-decoration: none;
-
+  -webkit-border-radius: 20;
+  -moz-border-radius: 20;
+  border-radius: 20px;
+  font-family: Courier New;
+  color: #126e4b;
+  font-size: 19px;
+  background: #ffffff;
+  padding: 10px 20px 10px 20px;
+  border: solid #bfc8c4 5px;
+  text-decoration: none;
 }
 
 #main-start-button:hover {
-background: #ffffff;
-    background-image: -webkit-linear-gradient(top, #ffffff, #b0bdb7);
-    background-image: -moz-linear-gradient(top, #ffffff, #b0bdb7);
-    background-image: -ms-linear-gradient(top, #ffffff, #b0bdb7);
-    background-image: -o-linear-gradient(top, #ffffff, #b0bdb7);
-    background-image: linear-gradient(to bottom, #ffffff, #b0bdb7);
-    text-decoration: none;
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, #ffffff, #b0bdb7);
+  background-image: -moz-linear-gradient(top, #ffffff, #b0bdb7);
+  background-image: -ms-linear-gradient(top, #ffffff, #b0bdb7);
+  background-image: -o-linear-gradient(top, #ffffff, #b0bdb7);
+  background-image: linear-gradient(to bottom, #ffffff, #b0bdb7);
+  text-decoration: none;
 }
+/* ------------------------------------------------- */
 
 /* general button  */
 .button {
 
+    
 }
 
 /* quiz buttons */
 .quiz-button {
-
+    text-align: center;
+    margin: 10px;
 }
 
 /* back button  */
 
 #back-to-button {
-
 }
 
 /* clear button  */
 
 #clear-scores-button {
-
 }
 
-
 /* ------------------------------------------------- */
+
+
