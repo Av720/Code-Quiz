@@ -6,7 +6,7 @@ const mainLeaderboardDiv = document.querySelector("#main-leaderboard-div");
 
 // ----------------------------------------------------------------------------------
 
-// FUNCTION TO APPEAR CARDS AND HIDE THEM - TIE THESE TO THE GLOBAL VARS
+// FUNCTION TO APPEAR CARDS AND HIDE THEM - set attribute to true 
 
 function showHideCards() {
     mainQuestionsDiv.setAttribute("hidden", true);
@@ -23,7 +23,7 @@ var mainResultsText = document.querySelector("#main-results-textp")
 
 // ----------------------------------------------------------------------------------
 //CREATE AND OBERJCT/ARRAY FOR EACH QUESTION
-var questions = [
+var listOfquestions = [
     {
         title: "Which of the following is an advantage of using JavaScript?",
         choices: [
@@ -124,6 +124,16 @@ function startMainQuiz() {
     displayTime();
 }
 
-
-
 // ----------------------------------------------------------------------------------
+
+// CREATE A SHOW THE QUESTION FUNCTION
+
+function showQuestion() {
+
+    // create 2 variables > one for the question and one for the answer 
+    var title = questions[mainQuestion]
+    var choices = listOfquestions.choices;
+
+    var questionTitle = document.querySelector("#main-question-h2");
+    questionTitle.textContent = question.title;
+}
