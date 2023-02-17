@@ -21,7 +21,6 @@
   <header>
     <!-- NAVBAR -->
 
-    <a id="highscores-link" class="highscores">Highscores</a>
 
     <!-- TIMER  WITH EMTPY FIELD-->
     <time class="time-text">Time: <span id="time"></span></time>
@@ -30,7 +29,7 @@
   <!-- MAIN BODY -->
   <main>
     <!-- START OF QUESTIONS DIV  -->
-    <div id="main-questions-div" class="box-card">
+    <div style="" id="main-questions-div" class="box-card">
       <!-- CODING QUIZ  HEADLINE-->
       <h2>CODING QUIZ CHALLENGE</h2>
 
@@ -43,10 +42,11 @@
 
       <!-- START QUIZ BUTTON  -->
       <button id="main-start-button" class="button">Start Quiz</button>
+      <button id="leaderboard-button" class="button">Show Leaderboard</button>
     </div>
 
     <!-- QUESTIONS START AND STOP W/ HIDDEN INPUT FIELD-->
-    <div hidden id="main-question-card" class="box-card">
+    <div style="display: none;" id="main-question-card" class="box-card">
       <!-- MAIN HEADER QUESTION H2  -->
       <h2 id="main-question-h2"></h2>
 
@@ -69,22 +69,27 @@
     </div>
 
     <!-- END OF SCORE CARD W/ HIDDEN hidden INPUT FIELD-->
-    <div hidden id="main-score-div" class="box-card">
+    <div style="display: none;" id="main-score-div" class="box-card">
       <h2>TEST COMPLETED</h2>
 
       <!-- YOUR FINAL SCORE TEXTCONTENT AND LEFT EMPTY -->
       <p>YOUR FINAL SCORE IS: <span id="main-score-p"></span>.</p>
 
       <!-- SCORE AND INITIALS BOX FORM -->
-      <form class="main-form" id="submission-form">
-        <label for="initials">ENTER INITIALS HERE:</label>
+      <div class="main-form">
         <input type="text" id="main-initials-input" />
         <button id="main-submit-button" class="button">Submit</button>
-      </form>
+      </div>
+
+      <!-- <form class="main-form" id="submission-form">
+          <label for="initials">ENTER INITIALS HERE:</label>
+          <input type="text" id="main-initials-input" />
+          <button id="main-submit-button" class="button">Submit</button>
+        </form> -->
     </div>
 
     <!-- LEADERBOARD RESULTS PAGE W/ HIDDEN INPUT FIELD-->
-    <div hidden id="main-leaderboard-div" class="box-card">
+    <div style="display: none;" id="main-leaderboard-div" class="box-card">
       <!-- LEADERBOARD Highscores header  -->
       <h2>Leaderboard Scores</h2>
 
@@ -93,8 +98,8 @@
 
       <!-- GO BACK AND CLEAR SCORES BUTTONS -->
       <div class="results-buttons">
-        <button id="back-button" class="button">GO BACK</button>
-        <button id="clear-button" class="button">CLEAR SCORES</button>
+        <button id="back-to-button" class="button">Go Back</button>
+        <button id="clear-scores-button" class="button">Clear Scores</button>
       </div>
     </div>
   </main>
