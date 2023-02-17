@@ -3,7 +3,7 @@
 body {
   margin: 0;
   font-family: "Courier New", Courier, monospace;
-  background-color: rgb(100, 125, 117);
+  background-color: rgb(119, 143, 135);
 }
 /* ------------------------------------------------- */
 /* HEADER  */
@@ -21,7 +21,7 @@ header {
 /* TIME  */
 
 time {
-    min-width: 100px;
+  min-width: 100px;
 }
 /* ------------------------------------------------- */
 
@@ -38,17 +38,16 @@ main {
 
 /* HIGHSCORES AND TIME  */
 
-#highscores-link, .time-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-
+.highscores,
+.time-text {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 /* ------------------------------------------------- */
 
 #time {
-    margin-right: 80px;
-   
+  margin-right: 80px;
 }
 
 /* ------------------------------------------------- */
@@ -72,91 +71,50 @@ main {
 
 /* ALL BUTTONS  */
 
-/* start button  */
-#main-start-button {
-  -webkit-border-radius: 20;
-  -moz-border-radius: 20;
-  border-radius: 20px;
-  font-family: Courier New;
-  color: #126e4b;
-  font-size: 19px;
-  background: #ffffff;
-  padding: 10px 20px 10px 20px;
-  border: solid #bfc8c4 5px;
-  text-decoration: none;
-}
-
-#main-start-button:hover {
-  background: #ffffff;
-  background-image: -webkit-linear-gradient(top, #ffffff, #b0bdb7);
-  background-image: -moz-linear-gradient(top, #ffffff, #b0bdb7);
-  background-image: -ms-linear-gradient(top, #ffffff, #b0bdb7);
-  background-image: -o-linear-gradient(top, #ffffff, #b0bdb7);
-  background-image: linear-gradient(to bottom, #ffffff, #b0bdb7);
-  text-decoration: none;
-}
-/* ------------------------------------------------- */
-
-/* general button  */
-.button {
-
-
-}
-
 /* quiz buttons */
 .quiz-button {
-    font-family: 'Courier New', Courier, monospace;
-    text-align: left;
-    margin: 10px;
-    width: 100%;
-    color: white;
-    background-color: rgb(38, 68, 68);
-    height: 40px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  text-align: left;
+  margin: 10px;
+  width: 85%;
+  color: white;
+  background-color: rgb(38, 68, 68);
+  height: 40px;
+  border-radius: 20px;
 }
 
-/* back button  */
-
-#back-to-button {
+.button {
+  background: #07873c;
+  background-image: -webkit-linear-gradient(top, #07873c, #15591e);
+  background-image: -moz-linear-gradient(top, #07873c, #15591e);
+  background-image: -ms-linear-gradient(top, #07873c, #15591e);
+  background-image: -o-linear-gradient(top, #07873c, #15591e);
+  background-image: linear-gradient(to bottom, #07873c, #15591e);
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 15px;
+  font-family: Courier New;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
 }
 
-/* clear button  */
-
-#clear-scores-button {
-}
-
-#main-submit-button {
-    background: #07873c;
-        background-image: -webkit-linear-gradient(top, #07873c, #15591e);
-        background-image: -moz-linear-gradient(top, #07873c, #15591e);
-        background-image: -ms-linear-gradient(top, #07873c, #15591e);
-        background-image: -o-linear-gradient(top, #07873c, #15591e);
-        background-image: linear-gradient(to bottom, #07873c, #15591e);
-        -webkit-border-radius: 15;
-        -moz-border-radius: 15;
-        border-radius: 15px;
-        font-family: Courier New;
-        color: #ffffff;
-        font-size: 14px;
-        padding: 10px 20px 10px 20px;
-        text-decoration: none;
-}
-
-#main-submit-button:hover { 
-background: #3cfc86;
-    background-image: -webkit-linear-gradient(top, #3cfc86, #3498db);
-    background-image: -moz-linear-gradient(top, #3cfc86, #3498db);
-    background-image: -ms-linear-gradient(top, #3cfc86, #3498db);
-    background-image: -o-linear-gradient(top, #3cfc86, #3498db);
-    background-image: linear-gradient(to bottom, #3cfc86, #3498db);
+.button:hover {
+background: #45825c;
+    background-image: -webkit-linear-gradient(top, #45825c, #315e3c);
+    background-image: -moz-linear-gradient(top, #45825c, #315e3c);
+    background-image: -ms-linear-gradient(top, #45825c, #315e3c);
+    background-image: -o-linear-gradient(top, #45825c, #315e3c);
+    background-image: linear-gradient(to bottom, #45825c, #315e3c);
     text-decoration: none;
 }
 
 #main-initials-input {
-    padding-top: 10px;
-    border-bottom-width: 6.6;
-    padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom-width: 6.6;
+  padding-bottom: 10px;
 }
 
 /* ------------------------------------------------- */
-
-
