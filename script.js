@@ -13,9 +13,7 @@ function showHideCard() {
     mainQuestionsDiv.style = "display: none;"
     mainQuestionH2.style = "display: none;"
     mainScoreDiv.style = "display: none;"
-    // mainQuestionsDiv.setAttribute("hidden", true);
-    // mainQuestionH2.setAttribute("hidden", true);
-    // mainScoreDiv.setAttribute("hidden", true);
+
 
 }
 
@@ -24,10 +22,7 @@ function showHideCard() {
 var mainResultsDiv = document.querySelector("#main-results-div")
 var mainResultsText = document.querySelector("#main-results-textp")
 
-//hide result div
-// function hideText() {
-//     mainScoreDiv.style.display = "none";
-// }
+
 
 // ----------------------------------------------------------------------------------
 //CREATE AND OBERJCT/ARRAY FOR EACH QUESTION
@@ -101,23 +96,10 @@ document.querySelector("#main-start-button").addEventListener("click", startMain
 
 // ----------------------------------------------------------------------------------
 
-// DIAPLAY TIME ON PAGE 
 
 // create local variable for time 
 var timeShow = document.querySelector("#time");
-// var time = 500
-// function displayTime() {
-//     timeDisplay.innerHTML = time;
-// }
 
-// //reduce the time by 5 function 
-// function timerCountdown() {
-//     time--;
-//     displayTime();
-//     if (time < 1) {
-//         endQuiz();
-//     }
-// }
 
 var time = 75000;
 var doingQuiz = true;
@@ -159,10 +141,7 @@ function startMainQuiz() {
     startTime2()
     showQuestion(question);
 
-    // mainTime = questions.length * 5
 
-    // var intervalID = setInterval(countdown, 1000);
-    // displayTime();
 }
 
 
