@@ -1,6 +1,6 @@
 //select each card div by id and assign to variables
 const mainQuestionsDiv = document.querySelector("#main-questions-div");
-const mainQuestionh2 = document.querySelector("#main-question-h2");
+const mainQuestionH2 = document.querySelector("#main-question-card");
 const mainScoreDiv = document.querySelector("#main-score-div");
 const mainLeaderboardDiv = document.querySelector("#main-leaderboard-div");
 
@@ -10,16 +10,19 @@ const mainLeaderboardDiv = document.querySelector("#main-leaderboard-div");
 
 function showHideCards() {
     mainQuestionsDiv.setAttribute("hidden", true);
-    mainQuestionh2.setAttribute("hidden", true);
+    mainQuestionH2.setAttribute("hidden", true);
     mainScoreDiv.setAttribute("hidden", true);
 }
-
-
 
 // VARIABLES FOR THE HIDDEN RESULTS > TIE WITH DOM
 
 var mainResultsDiv = document.querySelector("#main-results-div")
 var mainResultsText = document.querySelector("#main-results-textp")
+
+//hide result div
+function hideText() {
+    mainScoreDiv.style.display = "none";
+}
 
 // ----------------------------------------------------------------------------------
 //CREATE AND OBERJCT/ARRAY FOR EACH QUESTION
@@ -126,14 +129,33 @@ function startMainQuiz() {
 
 // ----------------------------------------------------------------------------------
 
-// CREATE A SHOW THE QUESTION FUNCTION
+// CREATE A FUNCTION TO SHOW THE QUESTION 
 
 function showQuestion() {
 
     // create 2 variables > one for the question and one for the answer 
-    var title = questions[mainQuestion]
-    var choices = listOfquestions.choices;
+    title = questions[mainQuestion]
+    newChoices = listOfquestions.choices;
 
     var questionTitle = document.querySelector("#main-question-h2");
     questionTitle.textContent = question.title;
+
+    // create loop for the function
+
+    for (var i = 0; i < choices.length; i++) {
+        var choice = choices[i];
+        var newChoiceButton = document.querySelector("#question" + i);
+        newChoiceButton.textContent = choice;
+    }
 }
+
+//when is the question button is clicked function 
+document.querySelector("#all-questions").addEventListener("click", mainAnswer);
+
+// create function to compare the question to the answer and tie in 
+function correctAnswer(newChoiceButton) {
+
+    return newChoiceButton.textContent === listOfquestions[mainQuestion].answer;
+
+}
+// ----------------------------------------------------------------------------------
