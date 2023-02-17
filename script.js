@@ -107,19 +107,6 @@ document
 
 // create local variable for time
 var timeShow = document.querySelector("#time");
-// var time = 500
-// function displayTime() {
-//     timeDisplay.innerHTML = time;
-// }
-
-// //reduce the time by 5 function
-// function timerCountdown() {
-//     time--;
-//     displayTime();
-//     if (time < 1) {
-//         endQuiz();
-//     }
-// }
 
 var time = 75000;
 var doingQuiz = true;
@@ -143,16 +130,13 @@ var correct = 0;
 
 function startMainQuiz() {
     showHideCard();
-    // hiddencards();
+
     questioncard.removeAttribute("hidden");
 
     startTime();
     showQuestion(question);
 
-    // mainTime = questions.length * 5
 
-    // var intervalID = setInterval(countdown, 1000);
-    // displayTime();
 }
 
 // ----------------------------------------------------------------------------------
@@ -235,33 +219,56 @@ function checkAnswer(answer) {
 }
 // ----------------------------------------------------------------------------------
 
-var mainLeaderboard
+var submitButton = document.querySelector("#main-submit-button");
+var mainInitials = document.querySelector("#main-initials-input");
 
 
 
 
+submitButton.addEventListener("click", storeMainScore);
+
+function storeMainScore(event) {
+    event.preventDefault();
+
+    // check for input
+
+    if (!mainInitials.value) {
+        alert("Please enter your initials!")
+        return;
+    }
+
+    var leaderboardScores = {
+        initials: mainInitials.value,
+        score: time,
+    }
+    storedLeaderboard(leaderboardScores);
+
+    hideQuestions();
+    mainScoreDiv.removeAttribute("hidden")
 
 
 
 
-
-
-// ----------------------------------------------------------------------------------
-
-var clearButton = document.querySelector("#clear-button");
-clearButton.addEventListener("click", clearHighscores);
-
-//clear local storage and display empty leaderboard
-function clearHighscores() {
-    localStorage.clear();
-    renderLeaderboard();
 }
 
-const backButton = document.querySelector("#back-button");
-backButton.addEventListener("click", returnToStart);
+var newLeaderboard = getLeaderboard();
 
-function correctAnswer(newChoiceButton) {
-    return newChoiceButton.textContent === listOfquestions[mainQuestion].answer;
+function storedLeaderboard(leaderboardScores) {
+    newLeaderboard.push(leaderboardScores);
+    localStorage.setItem("newLeaderboard", JSON.stringify(newLeaderboard));
 }
-// ----------------------------------------------------------------------------------
+
+
+function getLeaderboard() {
+    var newStoredLeaderboard = localStorage.getItem("newLeaderboard");
+    if (newStoredLeaderboard !== null) {
+        newLeaderboard = JSON.parse(newStoredLeaderboard);
+        return newLeaderboard;
+    } else {
+        newLeaderboard = [];
+
+    }
+    return newLeaderboard;
+}
+
 
