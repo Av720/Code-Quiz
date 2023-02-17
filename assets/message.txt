@@ -7,7 +7,7 @@ const questioncard = document.querySelector("#main-question-card");
 
 // ----------------------------------------------------------------------------------
 
-// FUNCTION TO APPEAR CARDS AND HIDE THEM - set attribute to true
+// FUNCTION TO APPEAR CARDS AND HIDE THEM - set attribute to true 
 
 function showHideCard() {
     mainQuestionsDiv.setAttribute("hidden", true);
@@ -17,8 +17,8 @@ function showHideCard() {
 
 // VARIABLES FOR THE HIDDEN RESULTS > TIE WITH DOM
 
-var mainResultsDiv = document.querySelector("#main-results-div");
-var mainResultsText = document.querySelector("#main-results-textp");
+var mainResultsDiv = document.querySelector("#main-results-div")
+var mainResultsText = document.querySelector("#main-results-textp")
 
 //hide result div
 function hideText() {
@@ -55,12 +55,7 @@ var listOfquestions = [
         questionNumber: 3,
         title:
             "Which built-in method calls a function for each element in the array?",
-        choices: [
-            "1. while()",
-            "2. loop()",
-            "3. forEach()",
-            "4. None of the above",
-        ],
+        choices: ["1. while()", "2. loop()", "3. forEach()", "4. None of the above"],
         answer: "3. forEach()",
     },
 
@@ -88,31 +83,30 @@ var listOfquestions = [
     },
 ];
 
+
 // ----------------------------------------------------------------------------------
 
-// GLOBAL VARIABLES & add event listener
+// GLOBAL VARIABLES & add event listener 
 
-var mainID; //intervalID;
+var mainID //intervalID; 
 var mainTime; //time
-var mainQuestion; //currentQuestion;
+var mainQuestion;  //currentQuestion;
 
 // document.querySelector("#main-start-button").addEventListener("click", showHideCard);
-document
-    .querySelector("#main-start-button")
-    .addEventListener("click", startMainQuiz);
+document.querySelector("#main-start-button").addEventListener("click", startMainQuiz);
 
 // ----------------------------------------------------------------------------------
 
-// DIAPLAY TIME ON PAGE
+// DIAPLAY TIME ON PAGE 
 
-// create local variable for time
+// create local variable for time 
 var timeShow = document.querySelector("#time");
 // var time = 500
 // function displayTime() {
 //     timeDisplay.innerHTML = time;
 // }
 
-// //reduce the time by 5 function
+// //reduce the time by 5 function 
 // function timerCountdown() {
 //     time--;
 //     displayTime();
@@ -125,12 +119,14 @@ var time = 75000;
 var doingQuiz = true;
 
 function startTime() {
-    setInterval(function () {
-        if (!doingQuiz) return;
-        if (time <= 0) return quizOver(`Time is up`);
-        time -= 1000;
-        document.querySelector("#time").innerHTML = `${time / 1000} Seconds`;
-    }, 1000);
+
+    setInterval(function(){
+        if (!doingQuiz) return
+        if (time <= 0) return quizOver(`Time is up`)
+        time -= 1000
+        document.querySelector("#time").innerHTML = `${time / 1000} Seconds` 
+    }, 1000)
+
 }
 
 // ----------------------------------------------------------------------------------
@@ -142,11 +138,12 @@ var question = 0;
 var correct = 0;
 
 function startMainQuiz() {
+
     showHideCard();
     // hiddencards();
     questioncard.removeAttribute("hidden");
 
-    startTime();
+    startTime()
     showQuestion(question);
 
     // mainTime = questions.length * 5
@@ -159,109 +156,76 @@ function startMainQuiz() {
 
 function quizOver(reason) {
     doingQuiz = false;
-    document.querySelector("#time").innerHTML = `Quiz is Over!`;
-    if (reason == "Time is up")
-        document.querySelector("#time").innerHTML = `Time is up!`;
-    console.log(`Quiz was finished because: ${reason}`);
-    hideQuestions();
-    document.querySelector(
-        "#main-question-h2"
-    ).innerText = `${reason}! Your score was ${correct}/${listOfquestions.length}`;
-    document.querySelector(
-        "#main-score-p"
-    ).innerHTML = `${correct}/${listOfquestions.length}`;
+    document.querySelector("#time").innerHTML = `Quiz is Over!`
+    if (reason == "Time is up") document.querySelector("#time").innerHTML = `Time is up!`
+    console.log(`Quiz was finished because: ${reason}`)
+    hideQuestions()
+    document.querySelector("#main-question-h2").innerText = `${reason}! Your score was ${correct}/${listOfquestions.length}`
+    document.querySelector("#main-score-p").innerHTML = `${correct}/${listOfquestions.length}`
 
     mainScoreDiv.removeAttribute("hidden");
+
 }
 
 function timeIsUp() {
-    hideQuestions();
-    document.querySelector("#time").innerHTML = `Time is up!`;
-    document.querySelector(
-        "#main-question-h2"
-    ).innerText = `Time is Up! Your score was ${correct}/${listOfquestions.length}`;
+    hideQuestions()
+    document.querySelector("#time").innerHTML = `Time is up!` 
+    document.querySelector("#main-question-h2").innerText = `Time is Up! Your score was ${correct}/${listOfquestions.length}`
 }
 
-// CREATE A FUNCTION TO SHOW THE QUESTION
+// CREATE A FUNCTION TO SHOW THE QUESTION 
 
 function hideQuestions() {
-    document.querySelector("#question1").style = "display: none;";
-    document.querySelector("#question2").style = "display: none;";
-    document.querySelector("#question3").style = "display: none;";
-    document.querySelector("#question4").style = "display: none;";
-    document.querySelector("#question5").style = "display: none;";
+    document.querySelector("#question1").style = "display: none;"
+    document.querySelector("#question2").style = "display: none;"
+    document.querySelector("#question3").style = "display: none;"
+    document.querySelector("#question4").style = "display: none;"
+    document.querySelector("#question5").style = "display: none;"
 }
 
 function showQuestion(questionNumber) {
-    console.log(
-        `Loading Question #${questionNumber + 1}: ${listOfquestions[questionNumber]["title"]
-        }`
-    );
-    document.querySelector("#main-question-h2").innerText =
-        listOfquestions[questionNumber]["title"];
+    console.log(`Loading Question #${questionNumber + 1}: ${listOfquestions[questionNumber]['title']}`)
+    document.querySelector("#main-question-h2").innerText = listOfquestions[questionNumber]['title']
     // console.log(listOfquestions[questionNumber]['choices'])
-    for (var i = 0; i < listOfquestions[questionNumber]["choices"].length; i++) {
+    for (var i = 0; i < listOfquestions[questionNumber]['choices'].length; i++) {
         // console.log("#question" + i + 1)
         document.querySelector("#question" + (i + 1)).style = "";
-        document.querySelector("#question" + (i + 1)).innerHTML =
-            listOfquestions[questionNumber]["choices"][i];
-        document.querySelector("#question" + (i + 1)).value =
-            listOfquestions[questionNumber]["choices"][i];
-        document
-            .querySelector("#question" + (i + 1))
-            .addEventListener("click", checkAnswer);
+        document.querySelector("#question" + (i + 1)).innerHTML = listOfquestions[questionNumber]['choices'][i]
+        document.querySelector("#question" + (i + 1)).value = listOfquestions[questionNumber]['choices'][i]
+        document.querySelector("#question" + (i + 1)).addEventListener("click", checkAnswer);
     }
+
 }
 
 function checkAnswer(answer) {
-    console.log(answer.srcElement.value);
+    console.log(answer.srcElement.value)
     if (listOfquestions[question]["answer"] === answer.srcElement.value) {
-        console.log("Question is correct, moving on to the next Question");
+        console.log("Question is correct, moving on to the next Question")
         correct++;
     } else {
-        time -= 10000;
-        console.log("Question is incorrect, moving onto the next question");
+        time -= 10000
+        console.log("Question is incorrect, moving onto the next question")
     }
 
-    hideQuestions();
+    hideQuestions()
     if (question + 1 == listOfquestions.length) {
-        console.log(`DONE!`);
+        console.log(`DONE!`)
         // document.querySelector("#main-question-h2").innerText = `Congratulations! Your score was ${correct}/${listOfquestions.length}`
-        quizOver(`Congratulations`);
-        return;
+        quizOver(`Congratulations`)
+        return
     }
     question++;
-    showQuestion(question);
-}
-// ----------------------------------------------------------------------------------
+    showQuestion(question)
 
-var mainLeaderboard
-
-
-
-
-
-
-
-
-
-
-// ----------------------------------------------------------------------------------
-
-var clearButton = document.querySelector("#clear-button");
-clearButton.addEventListener("click", clearHighscores);
-
-//clear local storage and display empty leaderboard
-function clearHighscores() {
-    localStorage.clear();
-    renderLeaderboard();
 }
 
-const backButton = document.querySelector("#back-button");
-backButton.addEventListener("click", returnToStart);
+//when is the question button is clicked function 
+// document.querySelector("#all-questions").addEventListener("click", mainAnswer);
 
+// create function to compare the question to the answer and tie in 
 function correctAnswer(newChoiceButton) {
+
     return newChoiceButton.textContent === listOfquestions[mainQuestion].answer;
+
 }
 // ----------------------------------------------------------------------------------
-
